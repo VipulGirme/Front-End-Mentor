@@ -1,0 +1,65 @@
+/* Color Schema */
+:root {
+    --primary-soft-blue: hsl(215, 51%, 70%);
+    --primary-cyan: hsl(178, 100%, 50%);
+
+    --neutral-dark-blue1: hsl(217, 54%, 11%);
+    --neutral-dark-blue2: hsl(216, 50%, 16%);
+    --neutral-dark-blue3: hsl(215, 32%, 27%);
+    
+    --white:  hsl(0, 0%, 100%);
+}
+*, body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--neutral-dark-blue1);
+    font-family: 'Outfit',sans-serif;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card-container {
+    width: 350px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: var(--neutral-dark-blue2);
+    padding: 24px;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 22px;
+    margin-top: 24px;
+    color: var(--white);
+    /* line-height: 28px; */
+}
+.title:hover, .creator .name:hover {
+    cursor: pointer;
+    color: var(--primary-cyan);
+}
+
+.subtitle {
+    color: var(--primary-soft-blue);
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24pxs;
+}
+
+.etherium, .time {
+    display: flex;
+    align-items: center;
+}
