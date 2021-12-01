@@ -24,7 +24,7 @@ body {
 
 .card-container {
     width: 350px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: auto;
     background-color: var(--neutral-dark-blue2);
     padding: 24px;
@@ -33,6 +33,21 @@ body {
 .main-image {
     width: 100%;
     border-radius: 10px;
+    transition: .5s ease;
+}
+
+.main-image:hover {
+    cursor: pointer;    
+    opacity: 0.3;
+    border-radius: 8px;
+}
+
+.card-body-image:hover {
+    background-color: var(--primary-cyan);
+    background-image: url(./images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
 }
 
 .title {
@@ -40,7 +55,6 @@ body {
     font-size: 22px;
     margin-top: 24px;
     color: var(--white);
-    /* line-height: 28px; */
 }
 .title:hover, .creator .name:hover {
     cursor: pointer;
@@ -56,10 +70,70 @@ body {
 .row {
     display: flex;
     justify-content: space-between;
-    margin-top: 24pxs;
+    margin-top: 24px;
 }
 
 .etherium, .time {
     display: flex;
     align-items: center;
+}
+
+.separotor {
+    height: 1px;
+    background-color: var(--neutral-dark-blue3);
+    margin-top: 24px;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 8px;
+}
+
+.etherium .text {
+    color: var(--primary-cyan);
+    font-weight: 600;
+}
+
+.time .text {
+    color: var(--primary-soft-blue);
+    font-weight: 400;
+}
+
+.creator-image {
+    width: 30px;
+    border: 1px solid var(--white);
+    border-radius: 30px;
+}
+
+.creator {
+    display: flex;
+}
+
+.creator-row {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.creator .text {
+    color: var(--primary-soft-blue);
+    margin: 0 5px 0 16px;
+}
+
+.creator .name {
+    color: var(--white);
+}
+
+.creator .name, .creator .text {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 400px) {
+    .card-container {
+        width: 90vw;
+        min-width: 350px;
+        flex-direction: column-reverse;
+    }
 }
